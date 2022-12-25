@@ -12,8 +12,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setting the Environment Up.
       env:
-        NGROK_AUTH_TOKEN: 2JQJU0d1dEVEo6ZOffBrkn6rhFw_264VgPh3tZbb2vt199ZSZ
-        PASSWD: premium1234
+        NGROK_AUTH_TOKEN: 2JQS09aMEtA7ZGRvGppE7qaUyUp_6mtyDNQmpJGu1HcjhYpy7
+        PASSWD: premium123
       run: source setup.sh "$PASSWD" "$PASSWD" "$NGROK_AUTH_TOKEN"
     - name: ngrok is now listening to VNC connections on...
       run: curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
